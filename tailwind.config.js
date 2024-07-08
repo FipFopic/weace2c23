@@ -1,8 +1,7 @@
-import type { Config } from "tailwindcss"
+const { fontFamily } = require("tailwindcss/defaultTheme");
 
-import { fontFamily } from "tailwindcss/defaultTheme"
-
-const config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   darkMode: ["class"],
   content: ["./src/**/*.{ts,tsx}"],
   theme: {
@@ -74,6 +73,4 @@ const config = {
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
-
-export default config
+};
